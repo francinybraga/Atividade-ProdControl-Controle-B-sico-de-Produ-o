@@ -1,15 +1,18 @@
 export class Maquina {
-    #status
+    #status;
     constructor(codigo, nome, setor, status) {
-        this.codigo = codigo,
-        this.nome = nome,
-        this.setor = setor,
-        this.#status = status
+        this.codigo = codigo;
+        this.nome = nome;
+        this.setor = setor;
+        this.#status = "Desligado";
     }
-    get ligar(){
-        this.#status = true
+    get status(){
+        return  this.#status
     }
-    get desligar(){
-        this.#status = true
+    ligar(status){
+        this.#status = "Ligado";
+    }
+    desligar(status){
+        this.#status = "Desligado";
     }
 }
